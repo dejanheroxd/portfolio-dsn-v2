@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow: hidden;
+}
+
+.btn-active1 {
+  transform: rotate(45deg);
+  transition: transform 5.3s;
+}
+
+.btn-active2 {
+  transform: rotate(-45deg);
+  transition: transform 5.3s;
+}
