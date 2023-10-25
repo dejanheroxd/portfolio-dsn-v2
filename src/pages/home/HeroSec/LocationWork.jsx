@@ -10,23 +10,23 @@ export default function LocationWork() {
   }, []);
 
   return (
-    <div className="flex justify-between items-center left-0 right-0 h-36 absolute top-[39%]">
-      <div className="bg-dennisDark w-[280px] items-center h-[110px] flex pl-10 rounded-r-full">
+    <div className="flex justify-between items-center left-0 right-0 h-36 sm:absolute top-[39%]">
+      <div className="sm:bg-dennisDark w-[280px] items-center h-[110px] flex pl-10 rounded-r-full">
         <div className="text-white w-16 sm:text-xl">
-          <p className="leading-6">Located in Greece</p>
+          <p className="hidden sm:block leading-6">Located in Greece</p>
         </div>
-        <div className="ml-[82px] w-[77px] h-[77px] rounded-full bg-dennisGray">
+        <div className="absolute sm:relative bg-white/40 bottom-[95px] right-3 sm:bottom-0 ml-[82px] w-[65px] h-[65px] sm:w-[77px] sm:h-[77px] rounded-full sm:bg-dennisGray">
           <Lottie
             initialSegment={[26, 114]}
             lottieRef={worlRef}
             loop={true}
             animationData={animationData}
-            className="scale-[3]"
+            className="scale-[3.2] sm:scale-[3]"
           />
         </div>
       </div>
-      <div className="relative mr-52 flex justify-center items-center">
-        <div className="absolute top-[-140px] left-0">
+      <div className="sm:relative mr-52 flex justify-center items-center">
+        <div className="absolute bottom-52 left-5 sm:absolute sm:top-[-140px] sm:left-0">
           <svg
             width="23"
             height="23"
@@ -40,7 +40,9 @@ export default function LocationWork() {
             />
           </svg>
         </div>
-        <div className="text-5xl w-[365px] text-white">Web Developer</div>
+        <div className="absolute bottom-[110px] sm:bottom-0 left-5 text-[28px] sm:relative sm:text-5xl sm:w-[365px] text-white">
+          Web Developer
+        </div>
       </div>
     </div>
   );
