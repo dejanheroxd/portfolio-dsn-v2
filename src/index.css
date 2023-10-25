@@ -3,8 +3,18 @@
 @tailwind utilities;
 
 body {
-  overflow: hidden;
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent; /* Firefox */
   font-family: "Heebo", sans-serif;
+}
+
+/* Webkit (Safari and Chrome) scrollbar */
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: transparent; /* This will make the scrollbar thumb invisible */
 }
 
 .btn-active1 {

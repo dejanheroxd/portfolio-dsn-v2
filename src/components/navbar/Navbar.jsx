@@ -7,25 +7,25 @@ export default function Navbar() {
   const [isNavActive, setIsNavActive] = useState(false);
   console.log(isNavActive);
 
-  useEffect(() => {
-    const isLargeScreen = window.matchMedia("(min-width: 640px");
+  // useEffect(() => {
+  //   const isLargeScreen = window.matchMedia("(min-width: 640px");
 
-    const handleResize = () => {
-      if (isLargeScreen.matches) {
-        activateNav();
-      } else {
-        deactivateNav();
-      }
-    };
+  //   const handleResize = () => {
+  //     if (isLargeScreen.matches) {
+  //       activateNav();
+  //     } else {
+  //       deactivateNav();
+  //     }
+  //   };
 
-    handleResize();
+  //   handleResize();
 
-    isLargeScreen.addEventListener("change", handleResize);
+  //   isLargeScreen.addEventListener("change", handleResize);
 
-    return () => {
-      isLargeScreen.removeEventListener("change", handleResize);
-    };
-  }, []);
+  //   return () => {
+  //     isLargeScreen.removeEventListener("change", handleResize);
+  //   };
+  // }, []);
 
   function activateNav() {
     setIsNavActive(true);
