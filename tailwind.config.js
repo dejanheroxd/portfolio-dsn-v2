@@ -9,6 +9,10 @@ export default {
           100: "#455CE9",
           200: "#334BD3",
         },
+        dennisGray: "#999D9E",
+      },
+      transitionDuration: {
+        2000: "2000ms",
       },
     },
   },

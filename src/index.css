@@ -26,3 +26,9 @@ body::-webkit-scrollbar-thumb {
   transform: rotate(-45deg);
   transition: transform 5.3s;
 }
+
+/* HeroSec Slider */
+.sliderContainer {
+  position: absolute;
+  top: calc(100vh - 380px);
+}

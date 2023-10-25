@@ -2,10 +2,34 @@ import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { menuSlide, slide } from "./navAnim";
+import Bend from "./Bend";
 
 export default function Navbar() {
   const [isNavActive, setIsNavActive] = useState(false);
-  console.log(isNavActive);
+  const [hasScrolled100vh, setHasScrolled100vh] = useState(false);
+  const [navBtnCircleClicked, setNavBtnCircleClicked] = useState(true);
+
+  console.log(`Nav: ${isNavActive}`);
+  console.log(`NavButton: ${navBtnCircleClicked}`);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+
+      if (scrollPosition >= 200) {
+        setHasScrolled100vh(true);
+      } else {
+        setHasScrolled100vh(false);
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   // useEffect(() => {
   //   const isLargeScreen = window.matchMedia("(min-width: 640px");
@@ -27,6 +51,10 @@ export default function Navbar() {
   //   };
   // }, []);
 
+  function handleNavBtnCircleClicked() {
+    setNavBtnCircleClicked((prev) => !prev);
+  }
+
   function activateNav() {
     setIsNavActive(true);
   }
@@ -35,31 +63,9 @@ export default function Navbar() {
     setIsNavActive(false);
   }
 
-  const btnVars1 = {
-    initial: {
-      rotate: 0,
-    },
-    animate: {
-      rotate: 45,
-      y: 2,
-      transition: { duration: 0.4 },
-    },
-    exit: { rotate: 0, y: 0 },
-    transition: { duration: 0.8 },
-  };
-
-  const btnVars2 = {
-    initial: {
-      rotate: 0,
-    },
-    animate: {
-      rotate: -45,
-      y: -2,
-      transition: { duration: 0.4 },
-    },
-    exit: { rotate: 0, y: 0 },
-    transition: { duration: 0.8 },
-  };
+  function toggleNav() {
+    setIsNavActive((prev) => !prev);
+  }
 
   const wholeBtn = {
     initial: {
@@ -67,7 +73,9 @@ export default function Navbar() {
     },
     animate: {
       scale: 1,
-      transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] },
+      transition: {
+        duration: 0.12,
+      },
     },
     exit: {
       scale: 0,
@@ -76,7 +84,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="text-white  h-24 px-6 absolute top-0 left-0 right-0 flex items-center sm:justify-between sm:px-8 sm:h-20">
+    <nav className="text-white z-30 h-24 sm:h-[108px] px-6 sm:px-12 absolute top-0 left-0 right-0 flex items-center sm:justify-between sm:text-xl">
       <Link to="/">
         <span>©</span> Code by Dennis
       </Link>
@@ -149,61 +157,84 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
+            <Bend />
           </motion.ul>
         )}
       </AnimatePresence>
       {/*------------------------- Navigation Normal ------------------------ */}
       <ul className="gap-x-9 z-30 hidden sm:flex">
-        <li>
+        <li className="relative group/ulinks">
+          <span className="absolute bottom-[-10px] left-5 invisible group-hover/ulinks:visible">
+            <span className="bg-white w-[6px] h-[6px] rounded-full block"></span>
+          </span>
           <Link to="/">Home</Link>
         </li>
-        <li>
+        <li className="relative group/ulinks">
+          <span className="absolute bottom-[-10px] left-5 invisible group-hover/ulinks:visible">
+            <span className="bg-white w-[6px] h-[6px] rounded-full block"></span>
+          </span>
           <Link to="about">About</Link>
         </li>
-        <li>
+        <li className="relative group/ulinks">
+          <span className="absolute bottom-[-10px] left-5 invisible group-hover/ulinks:visible">
+            <span className="bg-white w-[6px] h-[6px] rounded-full block"></span>
+          </span>
           <Link to="contact">Contact</Link>
         </li>
       </ul>
       {/*------------------------- Button Nav ------------------------ */}
       <AnimatePresence>
-        {isNavActive && (
+        {(isNavActive || hasScrolled100vh) && (
           <motion.button
             variants={wholeBtn}
             initial="initial"
             animate="animate"
             exit="exit"
-            onClick={() => deactivateNav()}
+            onClick={() => {
+              toggleNav();
+              handleNavBtnCircleClicked();
+            }}
             className={`${
-              isNavActive ? "bg-dennisBlue-100" : "bg-dennisDark"
-            } rounded-full fixed top-[14px] right-[14px] sm:top-8 sm:right-8 flex justify-center items-center w-[67px] h-[67px] xl:w-[95px] xl:h-[95px] z-50`}
+              isNavActive ? "bg-dennisBlue-100" : "bg-dennisDark "
+            } rounded-full hover:bg-dennisBlue-100 duration-300 fixed top-[14px] scale-0 right-[14px] sm:top-8 sm:right-8 flex justify-center items-center w-[67px] h-[67px] xl:w-[95px] xl:h-[95px] z-50`}
           >
-            <div className="relative">
-              <motion.span
-                variants={btnVars1}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                className=" bg-white h-[1px] w-[25px] sm:w-[27px] block absolute top-[-2px] left-[-13px]"
-              ></motion.span>
-              <motion.span
-                variants={btnVars2}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                className=" bg-white h-[1px] w-[25px] sm:w-[27px] block absolute top-[2px] left-[-13px]"
-              ></motion.span>
-            </div>
+            {(navBtnCircleClicked || isNavActive || hasScrolled100vh) && (
+              <div className="relative">
+                <span
+                  className={`${
+                    isNavActive
+                      ? "bg-white -rotate-45 mt-[2px] z-50 transition"
+                      : ""
+                  }bg-white h-[1px] w-[25px] sm:w-[27px] transition-all duration-200 delay-100 block absolute top-[-3px] left-[-12px] sm:left-[-13px]`}
+                ></span>
+                <span
+                  className={`${
+                    isNavActive
+                      ? "bg-white rotate-45 mt-[-3px] z-50 transition"
+                      : ""
+                  }bg-white h-[1px] w-[25px] sm:w-[27px] transition-all duration-200  delay-100 block absolute top-[2px] left-[-12px] sm:left-[-13px]`}
+                ></span>
+              </div>
+            )}
           </motion.button>
         )}
       </AnimatePresence>
-      {!isNavActive && (
-        <button
-          onClick={() => activateNav()}
-          className="absolute right-6 z-30 sm:hidden"
-        >
-          Menu
-        </button>
-      )}
+      <AnimatePresence>
+        {!isNavActive && (
+          <motion.button
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1, transition: { duration: 0.1 } }}
+            exit={{ opacity: 1 }}
+            onClick={() => activateNav()}
+            className="absolute right-6 z-30 sm:hidden"
+          >
+            <span className="absolute top-[8px] left-[-13px]">
+              <span className="bg-white block w-[6px] h-[6px] rounded-full"></span>
+            </span>
+            Menu
+          </motion.button>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

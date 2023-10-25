@@ -1,6 +1,6 @@
 import React from "react";
-import HeroSec from "./HeroSec";
-import StatementSec from "./StatementSec";
+import HeroSec from "./HeroSec/HeroSec";
+import StatementSec from "./StatementSec/StatementSec";
 
 export default function Home() {
   return (
