@@ -5,7 +5,7 @@ import SliderText from "./SliderText";
 
 export default function HeroSec() {
   return (
-    <div className="relative h-[110vh] w-screen bg-dennisGray overflow-hidden">
+    <div className="relative h-[116vh] w-screen bg-dennisGray overflow-hidden">
       <div className="h-full w-full flex justify-center">
         <div className="h-full w-[995px] overflow-hidden">
           <img
