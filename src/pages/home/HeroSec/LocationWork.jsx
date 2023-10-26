@@ -28,6 +28,8 @@ export default function LocationWork() {
       <div className="sm:relative mr-52 flex justify-center items-center">
         <div className="absolute bottom-52 left-5 sm:absolute sm:top-[-140px] sm:left-0">
           <svg
+            data-scroll
+            data-scroll-speed={0.1}
             width="23"
             height="23"
             viewBox="0 0 25 25"

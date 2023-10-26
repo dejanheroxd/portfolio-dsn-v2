@@ -164,19 +164,19 @@ export default function Navbar() {
       {/*------------------------- Navigation Normal ------------------------ */}
       <ul className="gap-x-9 z-30 hidden sm:flex">
         <li className="relative group/ulinks">
-          <span className="absolute bottom-[-10px] left-5 invisible group-hover/ulinks:visible">
+          <span className="absolute bottom-[-10px] left-[26px] invisible group-hover/ulinks:visible">
             <span className="bg-white w-[6px] h-[6px] rounded-full block"></span>
           </span>
           <Link to="/">Home</Link>
         </li>
         <li className="relative group/ulinks">
-          <span className="absolute bottom-[-10px] left-5 invisible group-hover/ulinks:visible">
+          <span className="absolute bottom-[-10px] left-[25px] invisible group-hover/ulinks:visible">
             <span className="bg-white w-[6px] h-[6px] rounded-full block"></span>
           </span>
           <Link to="about">About</Link>
         </li>
         <li className="relative group/ulinks">
-          <span className="absolute bottom-[-10px] left-5 invisible group-hover/ulinks:visible">
+          <span className="absolute bottom-[-10px] left-[34px] invisible group-hover/ulinks:visible">
             <span className="bg-white w-[6px] h-[6px] rounded-full block"></span>
           </span>
           <Link to="contact">Contact</Link>

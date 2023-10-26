@@ -40,7 +40,7 @@ export default function SliderText() {
     gsap.set(firstText.current, { xPercent: xPercent });
     gsap.set(secondText.current, { xPercent: xPercent });
     requestAnimationFrame(animate);
-    xPercent += 0.11 * direction;
+    xPercent += 0.1 * direction;
   };
   return (
     <div className="h-20 absolute sliderContainer text-[130px] sm:text-[270px] text-white">
