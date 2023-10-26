@@ -9,8 +9,8 @@ export default function Navbar() {
   const [hasScrolled100vh, setHasScrolled100vh] = useState(false);
   const [navBtnCircleClicked, setNavBtnCircleClicked] = useState(true);
 
-  console.log(`Nav: ${isNavActive}`);
-  console.log(`NavButton: ${navBtnCircleClicked}`);
+  // console.log(`Nav: ${isNavActive}`);
+  // console.log(`NavButton: ${navBtnCircleClicked}`);
 
   useEffect(() => {
     const handleScroll = () => {

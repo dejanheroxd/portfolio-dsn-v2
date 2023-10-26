@@ -1,12 +1,12 @@
 import React from "react";
 import HeroSec from "./HeroSec/HeroSec";
-import StatementSec from "./StatementSec/StatementSec";
+import WorkStateSec from "./WorkStateSec/WorkStateSec";
 
 export default function Home() {
   return (
     <div>
       <HeroSec />
-      <StatementSec />
+      <WorkStateSec />
     </div>
   );
 }

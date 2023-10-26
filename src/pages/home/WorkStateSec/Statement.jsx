@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 
 import { slideUp, opacity } from "./anim";
 
-export default function StatementSec() {
+export default function Statement() {
   const phrase =
     "Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.";
   const description = useRef(null);
@@ -41,8 +41,9 @@ export default function StatementSec() {
           </motion.p>
           <button
             data-scroll
-            data-scroll-speed={0.1}
-            className="rounded-full right-9 bottom-[-244px] text-white bg-dennisDark absolute py-[94px] px-[71px]"
+            data-scroll-speed={0.22}
+            className="interactable buttonClass rounded-full right-9 hover:bg-dennisBlue-100 transition-colors duration-300 bottom-[-174px] text-white bg-dennisDark absolute py-[94px] px-[71px]"
+            datatype="go"
           >
             About Me
           </button>

@@ -32,3 +32,23 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   top: calc(100vh - 380px);
 }
+
+#trailer {
+  height: 15px;
+  width: 15px;
+  background-color: #1c1d20;
+  border-radius: 2rem;
+  color: white;
+
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.workSec:hover > #trailer {
+  opacity: 1;
+}
