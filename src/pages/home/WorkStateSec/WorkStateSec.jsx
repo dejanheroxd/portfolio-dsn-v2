@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Statement from "./Statement";
 import Work from "./Work";
 import Rating from "./Rating";
+import { useScroll, useTransform, motion } from "framer-motion";
 
 export default function WorkStateSec() {
   useEffect(() => {
@@ -46,13 +47,21 @@ export default function WorkStateSec() {
     };
   }, []);
 
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start end", "end start"],
+  });
+
+  const height = useTransform(scrollYProgress, [-1, 0.9], [400, -12.9]);
+
   return (
     <>
       <div className="relative workSec h-[150vh] md:h-[180vh] 2xl:h-[200vh]">
-        <div
+        <motion.div
           id="trailer"
           className="text-white text-[2px] flex justify-center items-center"
-        ></div>
+        ></motion.div>
         <Statement />
         <div className="h-[800px] px-6 sm:px-16 md:px-20 2xl:px-40">
           <div>
@@ -67,6 +76,9 @@ export default function WorkStateSec() {
         </div>
       </div>
       <Rating />
+      <motion.div style={{ height }} className="circleContainer ">
+        <div className="circle"></div>
+      </motion.div>
     </>
   );
 }

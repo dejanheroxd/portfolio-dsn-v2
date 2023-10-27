@@ -196,7 +196,7 @@ export default function Navbar() {
             }}
             className={`${
               isNavActive ? "bg-dennisBlue-100" : "bg-dennisDark "
-            } rounded-full hover:bg-dennisBlue-100 duration-300 fixed top-[14px] scale-0 right-[14px] sm:top-8 sm:right-8 flex justify-center items-center w-[67px] h-[67px] xl:w-[95px] xl:h-[95px] z-50`}
+            } rounded-full hover:bg-dennisBlue-100 border border-neutral-700 duration-300 fixed top-[14px] scale-0 right-[14px] sm:top-8 sm:right-8 flex justify-center items-center w-[67px] h-[67px] xl:w-[95px] xl:h-[95px] z-50`}
           >
             {(navBtnCircleClicked || isNavActive || hasScrolled100vh) && (
               <div className="relative">
