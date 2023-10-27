@@ -11,12 +11,12 @@ export default function Statement() {
 
   return (
     <div className="h-[70vh] text-dennisDark">
-      <div className=" h-full lg:flex lg:p-32 xl:p-56 xl:pl-[305px]">
+      <div className=" h-full lg:flex lg:p-32 lg:mt-[-130px] xl:mt-0 xl:p-56 xl:pl-[305px]">
         <div
           ref={description}
           className="lg:flex relative flex flex-col lg:flex-row sm:items-center xl:items-start items-start pl-5 sm:pl-0"
         >
-          <p className="w-[95%] sm:w-[80%] lg:w-[100%] pt-20 sm:pt-20 lg:pt-0 text-2xl sm:text-[27px] xl:text-[41px] 2xl:w-[890px] gap-x-[4px] sm:gap-x-[9px] lg:h-[150px] xl:h-[180px] flex flex-wrap lg:mr-20">
+          <p className="w-[95%] sm:w-[80%] lg:w-[80%] pt-20 sm:pt-20 lg:pt-0 text-2xl sm:text-[27px] xl:text-[41px] 2xl:w-[890px] gap-x-[4px] sm:gap-x-[9px] lg:h-[110px] xl:h-[280px] 2xl:h-[186px] flex flex-wrap lg:mr-20">
             {phrase.split(" ").map((word, index) => (
               <span
                 className="overflow-hidden  inline-flex relative "
@@ -34,7 +34,16 @@ export default function Statement() {
             ))}
           </p>
           <motion.p
-            className="w-60 sm:w-64 xl:w-64 sm:text-lg lg:text-base pt-12 lg:pt-0 sm:pt-16 xl:pt-0"
+            className="w-60 hidden xl:block sm:w-64 xl:w-64 sm:text-lg lg:text-base xl:text-[18px] xl:leading-7 pt-12 lg:pt-0 sm:pt-16 xl:pt-0"
+            variants={opacity}
+            initial="initial"
+            animate={isInView ? "open" : "closed"}
+          >
+            The combination of my passion for design, code & interaction
+            positions me in a unique place in the web design world
+          </motion.p>
+          <motion.p
+            className="w-60 text-red-400 lg:mt-[-95px] sm:absolute left-20 top-40 lg:top-80 lg:left-0 sm:w-64 xl:hidden lg:text-lg pt-12 sm:pt-16 xl:pt-0"
             variants={opacity}
             initial="initial"
             animate={isInView ? "open" : "closed"}
