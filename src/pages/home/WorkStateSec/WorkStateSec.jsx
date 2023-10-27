@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Statement from "./Statement";
 import Work from "./Work";
+import Rating from "./Rating";
 
 export default function WorkStateSec() {
   useEffect(() => {
@@ -46,23 +47,26 @@ export default function WorkStateSec() {
   }, []);
 
   return (
-    <div className="relative workSec">
-      <div
-        id="trailer"
-        className="text-white text-[2px] flex justify-center items-center"
-      ></div>
-      <Statement />
-      <div className="h-[800px] px-6 sm:px-16 md:px-20 2xl:px-40">
-        <div>
-          <p className="text-neutral-500 text-[14px] pb-12 pl-[135px]">
-            Recent Work
-          </p>
+    <>
+      <div className="relative workSec h-[150vh] md:h-[180vh] 2xl:h-[200vh]">
+        <div
+          id="trailer"
+          className="text-white text-[2px] flex justify-center items-center"
+        ></div>
+        <Statement />
+        <div className="h-[800px] px-6 sm:px-16 md:px-20 2xl:px-40">
+          <div>
+            <p className="text-neutral-500 hidden sm:block sm:text-[10px] md:text-[11px] lg:text-[14px] pb-8 pl-14 xl:pb-12 xl:pl-[135px]">
+              Recent Work
+            </p>
+          </div>
+          <Work borderTop={true} name={"ENERGYM"} />
+          <Work borderTop={false} name={"DALFORNO"} />
+          <Work borderTop={false} name={"MARCUS"} />
+          <Work borderTop={false} name={"BUREAU"} />
         </div>
-        <Work borderTop={true} name={"ENERGYM"} />
-        <Work borderTop={false} name={"DALFORNO"} />
-        <Work borderTop={false} name={"MARCUS"} />
-        <Work borderTop={false} name={"BUREAU"} />
       </div>
-    </div>
+      <Rating />
+    </>
   );
 }

@@ -86,7 +86,7 @@ export default function Navbar() {
   return (
     <nav className="text-white z-30 h-24 sm:h-[108px] px-6 sm:px-12 absolute top-0 left-0 right-0 flex items-center sm:justify-between sm:text-xl">
       <Link to="/">
-        <span>©</span> Code by Dennis
+        <span>©</span> Code by Dejan
       </Link>
       {/*------------------------- Navigation On Slide ------------------------ */}
       <AnimatePresence>
