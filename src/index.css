@@ -52,3 +52,9 @@ body::-webkit-scrollbar-thumb {
 .workSec:hover > #trailer {
   opacity: 1;
 }
+
+@media (max-width: 1400px) {
+  #trailer {
+    display: none;
+  }
+}

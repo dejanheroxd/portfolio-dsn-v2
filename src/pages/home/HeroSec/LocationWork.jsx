@@ -12,7 +12,7 @@ export default function LocationWork() {
   return (
     <div className="flex justify-between items-center left-0 right-0 h-36 sm:absolute top-[39%]">
       <div className="sm:bg-dennisDark w-[280px] items-center h-[110px] flex pl-10 rounded-r-full">
-        <div className="text-white w-16 sm:text-xl">
+        <div className="text-white w-16 sm:text-xl cursor-default">
           <p className="hidden sm:block leading-6">Located in Greece</p>
         </div>
         <div className="absolute sm:relative bg-white/40 bottom-[95px] right-3 sm:bottom-0 ml-[82px] w-[65px] h-[65px] sm:w-[77px] sm:h-[77px] rounded-full sm:bg-dennisGray">

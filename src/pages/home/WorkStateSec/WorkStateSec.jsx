@@ -20,8 +20,10 @@ export default function WorkStateSec() {
 
         if (interacting) {
           trailer.innerHTML = "View";
+          trailer.style.backgroundColor = "#455CE9";
         } else {
           trailer.innerHTML = "";
+          trailer.style.backgroundColor = "#1C1D20";
         }
       }
     };
@@ -50,7 +52,17 @@ export default function WorkStateSec() {
         className="text-white text-[2px] flex justify-center items-center"
       ></div>
       <Statement />
-      <Work />
+      <div className="h-[800px] px-6 sm:px-16 md:px-20 2xl:px-40">
+        <div>
+          <p className="text-neutral-500 text-[14px] pb-12 pl-[135px]">
+            Recent Work
+          </p>
+        </div>
+        <Work borderTop={true} name={"ENERGYM"} />
+        <Work borderTop={false} name={"DALFORNO"} />
+        <Work borderTop={false} name={"MARCUS"} />
+        <Work borderTop={false} name={"BUREAU"} />
+      </div>
     </div>
   );
 }

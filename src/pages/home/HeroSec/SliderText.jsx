@@ -43,7 +43,7 @@ export default function SliderText() {
     xPercent += 0.1 * direction;
   };
   return (
-    <div className="h-20 absolute sliderContainer text-[130px] sm:text-[270px] text-white">
+    <div className="h-20 absolute sliderContainer text-[130px] sm:text-[270px] text-white cursor-default">
       <div ref={slider} className="relative whitespace-nowrap">
         <p ref={firstText} className="pr-[50px]">
           Dejan Ntouskas -
