@@ -57,7 +57,7 @@ export default function WorkStateSec() {
 
   return (
     <>
-      <div className="relative workSec h-[150vh] md:h-[180vh] 2xl:h-[200vh]">
+      <div className="relative workSec h-[150vh] md:h-[180vh] 2xl:h-[200vh] ove">
         <motion.div
           id="trailer"
           className="text-white text-[2px] flex justify-center items-center"
@@ -76,7 +76,7 @@ export default function WorkStateSec() {
         </div>
       </div>
       <Rating />
-      <motion.div style={{ height }} className="circleContainer ">
+      <motion.div style={{ height }} className="circleContainer">
         <div className="circle"></div>
       </motion.div>
     </>

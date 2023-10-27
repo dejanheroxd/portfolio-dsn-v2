@@ -67,8 +67,9 @@ body::-webkit-scrollbar-thumb {
 
 .circle {
   height: 1550%;
-  width: 120%;
-  left: -10%;
+  width: 100%;
+  /* left: -10%; */
+  /* right: -10%; */
   /* top: -400px; */
   border-radius: 0 0 50% 50%;
   background-color: white;
