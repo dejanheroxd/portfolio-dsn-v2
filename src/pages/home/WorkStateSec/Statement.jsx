@@ -1,25 +1,44 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 import { slideUp, opacity } from "./anim";
+import gsap from "gsap";
 
 export default function Statement() {
+  const circle = useRef(null);
+
+  useEffect(() => {}, []);
+
+  const manageMouseEnter = () => {
+    gsap.to(circle.current, { top: "-25%", width: "150%", duration: 0.4 });
+  };
+
+  const manageMouseLeave = () => {
+    gsap.to(circle.current, { top: "-150%", width: "125%", duration: 0.4 });
+    gsap.to(circle.current, {
+      top: "100%",
+      width: "100%",
+      duration: 0,
+      delay: 0.4,
+    });
+  };
+
   const phrase =
     "Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.";
   const description = useRef(null);
   const isInView = useInView(description);
 
   return (
-    <div className="h-[70vh] text-dennisDark">
-      <div className=" h-full lg:flex lg:p-32 lg:mt-[-130px] xl:mt-0 xl:p-56 xl:pl-[305px]">
+    <div className="h-[70vh] text-dennisDark 2xl:h-[60vh]">
+      <div className=" h-full lg:mt-[-130px] lg:flex lg:pl-32 xl:mt-0 xl:p-56 xl:pl-[215px] 2xl:pl-[295px]">
         <div
           ref={description}
-          className="lg:flex relative flex flex-col lg:flex-row sm:items-center xl:items-start items-start pl-5 sm:pl-0"
+          className="relative flex flex-col items-start pl-5 sm:items-center sm:pl-0 lg:flex lg:flex-row xl:items-start"
         >
-          <p className="w-[95%] sm:w-[80%] lg:w-[80%] pt-20 sm:pt-20 lg:pt-0 text-2xl sm:text-[27px] xl:text-[41px] 2xl:w-[890px] gap-x-[4px] sm:gap-x-[9px] lg:h-[110px] xl:h-[280px] 2xl:h-[186px] flex flex-wrap lg:mr-20 2xl:mr-16">
+          <p className="flex w-[95%] flex-wrap gap-x-[4px] pt-20 text-2xl sm:w-[80%] sm:gap-x-[9px] sm:pt-20 sm:text-[27px] lg:mr-20 lg:h-[110px] lg:w-[80%] lg:pt-0 xl:h-[280px] xl:text-[41px] 2xl:mr-16 2xl:h-[186px] 2xl:w-[890px]">
             {phrase.split(" ").map((word, index) => (
               <span
-                className="overflow-hidden  inline-flex relative "
+                className="relative  inline-flex overflow-hidden "
                 key={index}
               >
                 <motion.span
@@ -34,7 +53,7 @@ export default function Statement() {
             ))}
           </p>
           <motion.p
-            className="w-60 hidden xl:block sm:w-64 xl:w-64 sm:text-lg lg:text-base xl:text-[18px] xl:leading-7 pt-12 lg:pt-0 sm:pt-16 xl:pt-0"
+            className="hidden w-60 pt-12 sm:w-64 sm:pt-16 sm:text-lg lg:pt-0 lg:text-base xl:block xl:w-64 xl:pt-0 xl:text-[18px] xl:leading-7 2xl:ml-10"
             variants={opacity}
             initial="initial"
             animate={isInView ? "open" : "closed"}
@@ -43,7 +62,7 @@ export default function Statement() {
             positions me in a unique place in the web design world
           </motion.p>
           <motion.p
-            className="w-60 lg:mt-[-95px] sm:absolute left-20 top-40 lg:top-80 lg:left-0 sm:w-64 xl:hidden lg:text-lg pt-12 sm:pt-16 xl:pt-0"
+            className="left-20 top-40 w-60 pt-12 sm:absolute sm:w-64 sm:pt-16 lg:left-0 lg:top-80 lg:mt-[15px] lg:text-lg xl:hidden xl:pt-0 2xl:mt-[-95px]"
             variants={opacity}
             initial="initial"
             animate={isInView ? "open" : "closed"}
@@ -52,12 +71,22 @@ export default function Statement() {
             positions me in a unique place in the web design world
           </motion.p>
           <button
+            onMouseEnter={() => {
+              manageMouseEnter();
+            }}
+            onMouseLeave={() => {
+              manageMouseLeave();
+            }}
             data-scroll
             data-scroll-speed={0.18}
-            className=" buttonClass py-[60px] px-[37px] rounded-full right-9 hover:bg-dennisBlue-100 transition-colors duration-300 bottom-[-130px] lg:bottom-[-80px] xl:bottom-[-120px] 2xl:bottom-[-135px] text-white bg-dennisDark absolute xl:py-[94px] xl:px-[71px]"
+            className="buttonClass absolute bottom-[-130px] right-9 overflow-hidden   rounded-full bg-dennisDark px-[37px] py-[60px] text-white transition-colors duration-300  lg:bottom-[-80px] xl:bottom-[-120px] xl:px-[71px] xl:py-[94px] 2xl:bottom-[-235px]"
             datatype="go"
           >
-            About Me
+            <p className="relative z-50">About Me</p>
+            <div
+              ref={circle}
+              className="absolute left-[-15%] top-[100%] h-[150%] w-[100%] rounded-[50%] bg-dennisBlue-100"
+            ></div>
           </button>
         </div>
       </div>

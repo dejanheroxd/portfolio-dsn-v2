@@ -57,15 +57,15 @@ export default function WorkStateSec() {
 
   return (
     <>
-      <div className="relative workSec h-[150vh] md:h-[180vh] 2xl:h-[200vh] ove">
+      <div className="workSec relative h-[150vh] md:h-[180vh] 2xl:h-[200vh]">
         <motion.div
           id="trailer"
-          className="text-white text-[2px] flex justify-center items-center"
+          className="flex items-center justify-center text-[2px] text-white"
         ></motion.div>
         <Statement />
         <div className="h-[800px] px-6 sm:px-16 md:px-20 2xl:px-40">
           <div>
-            <p className="text-neutral-500 hidden sm:block sm:text-[10px] md:text-[11px] lg:text-[14px] pb-8 pl-14 xl:pb-12 xl:pl-[135px]">
+            <p className="hidden pb-8 pl-14 text-neutral-500 sm:block sm:text-[10px] md:text-[11px] lg:text-[14px] xl:pb-12 xl:pl-[135px]">
               Recent Work
             </p>
           </div>

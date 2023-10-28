@@ -27,48 +27,44 @@ export default function Footer() {
   }, []);
 
   return (
-    <div className="w-full flex justify-between px-14 bg-dennisDark pb-3">
-      <div className="flex gap-x-12">
+    <div className="flex w-full flex-col justify-between bg-dennisDark px-3 pb-8 sm:flex-row lg:px-14">
+      <div className="flex gap-x-12 pb-3 pl-[5px] sm:pb-0 sm:pl-0">
         <div className="flex flex-col gap-y-3">
-          <p className="text-neutral-500 text-[13px] font-semibold">VERSION</p>
+          <p className="text-[13px] font-semibold text-neutral-500">VERSION</p>
           <p className="text-white">2024 © Edition</p>
         </div>
         <div className="flex flex-col gap-y-3">
-          <p className="text-neutral-500 text-[13px] font-semibold">
+          <p className="text-[13px] font-semibold text-neutral-500">
             LOCAL TIME
           </p>
           <p className="text-white">{currentTime}</p>
         </div>
       </div>
-      <div className="flex flex-col gap-y-3">
-        <p className="text-neutral-500 text-[13px] font-semibold">SOCIALS</p>
-        <div className="flex gap-x-7">
+      <div className="flex flex-col gap-y-3 pl-[5px] sm:pl-0 ">
+        <p className="text-[13px] font-semibold text-neutral-500">SOCIALS</p>
+        <div className="flex gap-x-6 xl:gap-x-7">
           <div className="group/socialLink">
             <p className="text-white hover:cursor-pointer">Awwwards</p>
-            <span className="absolute invisible group-hover/socialLink:visible">
-              <span
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1, transition: { duration: 2 } }}
-                className="w-[78px] bg-white block h-[1px]"
-              ></span>
+            <span className="invisible absolute group-hover/socialLink:visible">
+              <span className="block h-[1px] w-[78px] bg-white"></span>
             </span>
           </div>
           <div className="group/socialLink">
             <p className="text-white hover:cursor-pointer">Instagram</p>
-            <span className="absolute invisible group-hover/socialLink:visible">
-              <span className="w-[73px] bg-white block h-[1px]"></span>
+            <span className="invisible absolute group-hover/socialLink:visible">
+              <span className="block h-[1px] w-[73px] bg-white"></span>
             </span>
           </div>
           <div className="group/socialLink">
             <p className="text-white hover:cursor-pointer">Twitter</p>
-            <span className="absolute invisible group-hover/socialLink:visible">
-              <span className="w-[51px] bg-white block h-[1px]"></span>
+            <span className="invisible absolute group-hover/socialLink:visible">
+              <span className="block h-[1px] w-[51px] bg-white"></span>
             </span>
           </div>
           <div className="group/socialLink">
             <p className="text-white hover:cursor-pointer">LinkedIn</p>
-            <span className="absolute invisible group-hover/socialLink:visible">
-              <span className="w-[60px] bg-white block h-[1px]"></span>
+            <span className="invisible absolute group-hover/socialLink:visible">
+              <span className="block h-[1px] w-[60px] bg-white"></span>
             </span>
           </div>
         </div>
