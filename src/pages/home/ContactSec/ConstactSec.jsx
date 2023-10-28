@@ -49,10 +49,10 @@ export default function ContactSec() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_5_2)">
+              <g clipPath="url(#clip0_5_2)">
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M38.9456 3.59302L36.29 0.951297L4.8421 32.6871L4.77482 12.4506L0.974836 12.4632L1.06328 39.0631L27.8398 38.974L27.8842 35.1739L7.44601 35.2418L38.9456 3.59302Z"
                   fill="white"
                 />
