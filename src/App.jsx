@@ -6,6 +6,7 @@ import About from "./pages/about/About";
 import { useEffect, useState } from "react";
 import PreLoader from "./components/navbar/PreLoader";
 import { AnimatePresence } from "framer-motion";
+import ContactSec from "./pages/home/ContactSec/ConstactSec";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,6 +35,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
         </Routes>
+        <ContactSec />
       </Router>
     </div>
   );

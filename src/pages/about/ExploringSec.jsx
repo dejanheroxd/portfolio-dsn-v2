@@ -4,7 +4,7 @@ import dennisExp from "../../assets/dennis-about.jpg";
 export default function ExploringSec() {
   return (
     <div className="flex w-full justify-center pt-40 ">
-      <div className="relative ml-6 flex h-[2500px] w-[1440px] overflow-hidden sm:ml-40">
+      <div className="relative ml-6 flex h-[1600px] w-[1440px] overflow-hidden sm:ml-40">
         <div
           data-scroll
           data-scroll-speed={-0.3}
