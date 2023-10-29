@@ -82,7 +82,7 @@ export default function Statement() {
             className="buttonClass absolute bottom-[-130px] right-9 overflow-hidden   rounded-full bg-dennisDark px-[37px] py-[60px] text-white transition-colors duration-300  lg:bottom-[-80px] xl:bottom-[-120px] xl:px-[71px] xl:py-[94px] 2xl:bottom-[-235px]"
             datatype="go"
           >
-            <p className="relative z-50">About Me</p>
+            <p className="relative z-20">About Me</p>
             <div
               ref={circle}
               className="absolute left-[-15%] top-[100%] h-[150%] w-[100%] rounded-[50%] bg-dennisBlue-100"
