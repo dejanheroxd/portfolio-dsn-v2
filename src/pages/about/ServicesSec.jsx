@@ -23,19 +23,19 @@ export default function ServicesSec() {
   ];
 
   return (
-    <div className="w-full justify-center  pb-52">
-      <p className="pb-20 pl-[168px] text-[62px] text-dennisDark">
+    <div className="w-full justify-center pb-52">
+      <p className="pb-20 pl-[30px] text-[62px] text-dennisDark min-[774px]:pl-[120px] 2xl:pl-[232px]">
         I can help you with ...
       </p>
-      <div className="flex justify-center gap-x-8">
+      <div className="flex flex-col items-center justify-center gap-x-8 min-[1446px]:flex-row">
         {services.map((service) => (
-          <div className="w-[500px]">
+          <div className="2x:w-[500px]">
             <div className="">
-              <p className="w-[450px] border-b-[2px] border-b-gray-300 pb-5 text-dennisGray">
+              <p className="w-[300px] border-b-[2px] border-b-gray-300 pb-5 text-dennisGray lg:w-[450px]">
                 {service.number}
               </p>
               <p className="py-8 text-[44px] text-dennisDark">{service.type}</p>
-              <p className="w-[455px] text-[19px] text-dennisDark">
+              <p className="w-[250px] text-[19px] text-dennisDark lg:w-[455px]">
                 {service.skill}
               </p>
             </div>

@@ -81,7 +81,9 @@ export default function Navbar() {
     <nav className="absolute left-0 right-0 top-0 z-30 flex h-24 items-center px-6 sm:h-[108px] sm:justify-between sm:px-12 sm:text-xl">
       <Link
         className={`${
-          location.pathname === "/" ? "text-white" : "text-dennisDark"
+          location.pathname === "/" || location.pathname === "/contact"
+            ? "text-white"
+            : "text-dennisDark"
         }`}
         to="/"
       >
@@ -124,7 +126,7 @@ export default function Navbar() {
                         block h-3 w-3 rounded-full bg-white"
                         ></span>
                       </span>
-                      <Link to={link.path}>{link.name}</Link>
+                      <Link to={link.path}> {link.name}</Link>
                     </li>
                   ))}
                 </motion.div>
@@ -146,11 +148,7 @@ export default function Navbar() {
       </AnimatePresence>
       {/*------------------------- Navbar Links ------------------------ */}
       <ul className="z-30 hidden gap-x-9 sm:flex">
-        <NavigationLink
-          name={"Home"}
-          leftMargin={"left-[26px]"}
-          path={"home"}
-        />
+        <NavigationLink name={"Home"} leftMargin={"left-[26px]"} path={""} />
         <NavigationLink
           name={"About"}
           leftMargin={"left-[25px]"}

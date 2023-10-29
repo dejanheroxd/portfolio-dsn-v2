@@ -9,13 +9,17 @@ export default function NavigationLink({ leftMargin, name, path }) {
       >
         <span
           className={`${
-            location.pathname === "/" ? "bg-white" : "bg-dennisDark"
+            location.pathname === "/" || location.pathname === "/contact"
+              ? "bg-white"
+              : "bg-dennisDark"
           } block h-[6px] w-[6px] rounded-full`}
         ></span>
       </span>
       <Link
         className={`${
-          location.pathname === "/" ? "text-white" : "text-dennisDark"
+          location.pathname === "/" || location.pathname === "/contact"
+            ? "text-white"
+            : "text-dennisDark"
         }`}
         to={`/${path}`}
       >

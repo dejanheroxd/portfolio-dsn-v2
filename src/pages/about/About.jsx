@@ -3,6 +3,7 @@ import HeadingSec from "./HeadingSec";
 import ExploringSec from "./ExploringSec";
 import ServicesSec from "./ServicesSec";
 import TestimonailSec from "./TestimonailSec";
+import ContactSec from "../home/ContactSec/ConstactSec";
 
 export default function About() {
   return (
@@ -11,6 +12,7 @@ export default function About() {
       <ExploringSec />
       <ServicesSec />
       <TestimonailSec />
+      <ContactSec />
     </div>
   );
 }
