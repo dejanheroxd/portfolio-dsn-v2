@@ -119,7 +119,7 @@ export default function Navbar() {
                   className="flex flex-col gap-y-5 text-white sm:gap-y-7"
                 >
                   {navLinks.map((link) => (
-                    <li className="group/item relative">
+                    <li key={link.name} className="group/item relative">
                       <span className="invisible absolute left-[-40px] top-8 group-hover/item:visible">
                         <span
                           className="
@@ -137,7 +137,9 @@ export default function Navbar() {
                 </p>
                 <div className="flex gap-x-5 xl:gap-x-6">
                   {socialLinks.map((link) => (
-                    <a href="">{link.name}</a>
+                    <a key={link.name} href="">
+                      {link.name}
+                    </a>
                   ))}
                 </div>
               </div>
@@ -186,7 +188,9 @@ export default function Navbar() {
             </span>
             <p
               className={`${
-                location.pathname === "/" ? "text-white" : "text-dennisDark"
+                location.pathname === "/" || location.pathname === "/contact"
+                  ? "text-white"
+                  : "text-dennisDark"
               }`}
             >
               Menu
