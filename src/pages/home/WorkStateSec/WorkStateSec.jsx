@@ -47,9 +47,9 @@ export default function WorkStateSec() {
     };
   }, []);
 
-  const container = useRef(null);
+  // const container = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: container,
+    // target: container,
     offset: ["start end", "end start"],
   });
 

@@ -119,8 +119,18 @@ export default function Navbar() {
                   className="flex flex-col gap-y-5 text-white sm:gap-y-7"
                 >
                   {navLinks.map((link) => (
-                    <li key={link.name} className="group/item relative">
-                      <span className="invisible absolute left-[-40px] top-8 group-hover/item:visible">
+                    <li
+                      onClick={() => deactivateNav()}
+                      key={link.name}
+                      className="group/item relative"
+                    >
+                      <span
+                        className={`${
+                          location.pathname === link.path
+                            ? "visible"
+                            : "invisible"
+                        } absolute left-[-40px] top-8 group-hover/item:visible`}
+                      >
                         <span
                           className="
                         block h-3 w-3 rounded-full bg-white"
@@ -145,6 +155,12 @@ export default function Navbar() {
               </div>
             </div>
             <Bend />
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { duration: 1 } }}
+              exit={{ opacity: 0, transition: { duration: 1 } }}
+              className="absolute left-[-1300px] top-0 h-full w-[1300px] origin-right bg-gradient-to-l from-black/30"
+            ></motion.div>
           </motion.ul>
         )}
       </AnimatePresence>

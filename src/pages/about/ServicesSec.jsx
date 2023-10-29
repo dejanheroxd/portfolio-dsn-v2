@@ -29,7 +29,7 @@ export default function ServicesSec() {
       </p>
       <div className="flex flex-col items-center justify-center gap-x-8 min-[1446px]:flex-row">
         {services.map((service) => (
-          <div className="2x:w-[500px]">
+          <div key={service.number} className="2x:w-[500px]">
             <div className="">
               <p className="w-[300px] border-b-[2px] border-b-gray-300 pb-5 text-dennisGray lg:w-[450px]">
                 {service.number}

@@ -25,7 +25,7 @@ export default function Bend() {
   };
 
   return (
-    <svg className="absolute top-0 left-[-99px] w-[100px] h-full stroke-none fill-dennisDark">
+    <svg className="absolute left-[-99px] top-0 z-30 h-full w-[100px] fill-dennisDark stroke-none">
       <motion.path
         variants={bend}
         initial="initial"
