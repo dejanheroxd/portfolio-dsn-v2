@@ -78,3 +78,53 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   box-shadow: 0px 60px 50px rgba(25, 25, 25, 0.748);
 }
+
+/* dots in about/Services */
+
+.dot-flashing {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 5px;
+  background-color: #000000;
+  color: #000000;
+  animation: dot-flashing 1.5s infinite linear alternate;
+  animation-delay: 0.5s;
+}
+.dot-flashing::before,
+.dot-flashing::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+.dot-flashing::before {
+  left: -13px;
+  width: 7px;
+  height: 7px;
+  border-radius: 5px;
+  background-color: #000000;
+  color: #000000;
+  animation: dot-flashing 1.5s infinite alternate;
+  animation-delay: 0s;
+}
+.dot-flashing::after {
+  left: 13px;
+  width: 7px;
+  height: 7px;
+  border-radius: 5px;
+  background-color: #000000;
+  color: #000000;
+  animation: dot-flashing 1.5s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dot-flashing {
+  0% {
+    background-color: #000000;
+  }
+  50%,
+  100% {
+    background-color: transparent;
+  }
+}

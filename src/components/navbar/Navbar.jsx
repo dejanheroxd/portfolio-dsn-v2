@@ -13,6 +13,27 @@ export default function Navbar() {
   const [navBtnCircleClicked, setNavBtnCircleClicked] = useState(true);
   const location = useLocation();
 
+  let navShadowRef = useRef();
+  let documentRef = useRef();
+
+  useEffect(() => {
+    function handleOutsideClick(e) {
+      if (navShadowRef.current && navShadowRef.current.contains(e.target)) {
+        deactivateNav();
+        console.log("clicked");
+      }
+    }
+
+    // Add the event listener to the document.
+    documentRef.current = handleOutsideClick;
+    document.addEventListener("mousedown", documentRef.current);
+
+    // Cleanup the event listener when the component is unmounted.
+    return () => {
+      document.removeEventListener("mousedown", documentRef.current);
+    };
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -71,10 +92,10 @@ export default function Navbar() {
   ];
 
   const socialLinks = [
-    { name: "Awwwards" },
-    { name: "Instagram" },
-    { name: "Twitter" },
-    { name: "LinkedIn" },
+    { name: "Awwwards", width: "w-[96px]" },
+    { name: "Instagram", width: "w-[90px]" },
+    { name: "Twitter", width: "w-[62px]" },
+    { name: "LinkedIn", width: "w-[75px]" },
   ];
 
   return (
@@ -147,8 +168,17 @@ export default function Navbar() {
                 </p>
                 <div className="flex gap-x-5 xl:gap-x-6">
                   {socialLinks.map((link) => (
-                    <a key={link.name} href="">
+                    <a
+                      key={link.name}
+                      href=""
+                      className="group/socialLink relative"
+                    >
                       {link.name}
+                      <span className="invisible absolute bottom-[-3px] left-0 group-hover/socialLink:visible">
+                        <span
+                          className={`block h-[1px] ${link.width} bg-white`}
+                        ></span>
+                      </span>
                     </a>
                   ))}
                 </div>
@@ -156,6 +186,7 @@ export default function Navbar() {
             </div>
             <Bend />
             <motion.div
+              ref={navShadowRef}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, transition: { duration: 1 } }}
               exit={{ opacity: 0, transition: { duration: 1 } }}

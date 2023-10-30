@@ -10,12 +10,12 @@ export default function LocationWork() {
   }, []);
 
   return (
-    <div className="flex justify-between items-center left-0 right-0 h-36 sm:absolute top-[39%]">
-      <div className="sm:bg-dennisDark w-[280px] items-center h-[110px] flex pl-10 rounded-r-full">
-        <div className="text-white w-16 sm:text-xl cursor-default">
-          <p className="hidden sm:block leading-6">Located in Greece</p>
+    <div className="left-0 right-0 top-[39%] flex h-36 items-center justify-between sm:absolute">
+      <div className="flex h-[110px] w-[280px] items-center rounded-r-full pl-10 sm:bg-dennisDark">
+        <div className="w-16 cursor-default text-white sm:text-xl">
+          <p className="hidden leading-6 sm:block">Located in Greece</p>
         </div>
-        <div className="absolute sm:relative bg-white/40 bottom-[95px] right-3 sm:bottom-0 ml-[82px] w-[65px] h-[65px] sm:w-[77px] sm:h-[77px] rounded-full sm:bg-dennisGray">
+        <div className="absolute bottom-[95px] right-3 ml-[82px] h-[65px] w-[65px] rounded-full bg-white/40 sm:relative sm:bottom-0 sm:h-[77px] sm:w-[77px] sm:bg-dennisGray">
           <Lottie
             initialSegment={[26, 114]}
             lottieRef={worlRef}
@@ -25,8 +25,8 @@ export default function LocationWork() {
           />
         </div>
       </div>
-      <div className="sm:relative mr-52 flex justify-center items-center">
-        <div className="absolute bottom-52 left-5 sm:absolute sm:top-[-140px] sm:left-0">
+      <div className="mr-52 flex items-center justify-center sm:relative">
+        <div className="absolute bottom-52 left-5 sm:absolute sm:left-0 sm:top-[-140px]">
           <svg
             data-scroll
             data-scroll-speed={0.1}
@@ -42,7 +42,7 @@ export default function LocationWork() {
             />
           </svg>
         </div>
-        <div className="absolute bottom-[110px] sm:bottom-0 left-5 text-[28px] sm:relative sm:text-5xl sm:w-[365px] text-white">
+        <div className="absolute bottom-[110px] left-5 text-[28px] text-white sm:relative sm:bottom-0 sm:w-[365px] sm:text-5xl">
           Web Developer
         </div>
       </div>

@@ -24,9 +24,14 @@ export default function ServicesSec() {
 
   return (
     <div className="w-full justify-center pb-52">
-      <p className="pb-20 pl-[30px] text-[62px] text-dennisDark min-[774px]:pl-[120px] 2xl:pl-[232px]">
-        I can help you with ...
-      </p>
+      <div className="pb-20 pl-[30px] text-[62px] text-dennisDark min-[774px]:pl-[120px] 2xl:pl-[232px]">
+        <div className="flex">
+          I can help you with{" "}
+          <div className="pl-6 pt-[60px]">
+            <div className="dot-flashing"></div>
+          </div>
+        </div>
+      </div>
       <div className="flex flex-col items-center justify-center gap-x-8 min-[1446px]:flex-row">
         {services.map((service) => (
           <div key={service.number} className="2x:w-[500px]">

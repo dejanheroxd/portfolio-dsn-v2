@@ -5,9 +5,9 @@ import { slideUp, opacity } from "./anim";
 import gsap from "gsap";
 
 export default function Statement() {
-  const circle = useRef(null);
-
   useEffect(() => {}, []);
+
+  const circle = useRef(null);
 
   const manageMouseEnter = () => {
     gsap.to(circle.current, { top: "-25%", width: "150%", duration: 0.4 });
@@ -85,7 +85,7 @@ export default function Statement() {
             <p className="relative z-20">About Me</p>
             <div
               ref={circle}
-              className="absolute left-[-15%] top-[100%] h-[150%] w-[100%] rounded-[50%] bg-dennisBlue-100"
+              className=" absolute left-[-15%] top-[100%] h-[150%] w-[100%] rounded-[50%] bg-dennisBlue-100"
             ></div>
           </button>
         </div>

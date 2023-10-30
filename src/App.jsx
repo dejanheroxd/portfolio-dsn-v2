@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import PreLoader from "./components/navbar/PreLoader";
 import { AnimatePresence } from "framer-motion";
 import ContactSec from "./pages/home/ContactSec/ConstactSec";
+import ScrollToTop from "./components/navbar/ScrollToTop";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,12 +30,15 @@ function App() {
         {isLoading && <PreLoader />}
       </AnimatePresence>
       <Router>
+        <ScrollToTop />
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-        </Routes>
+        <AnimatePresence mode="wait">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+          </Routes>
+        </AnimatePresence>
       </Router>
     </div>
   );
