@@ -1,7 +1,10 @@
 import React from "react";
 import dennisExp from "../../assets/dennis-about.jpg";
+import useLocomotiveScroll from "../../components/navbar/useLocomotiveScroll";
 
 export default function ExploringSec() {
+  useLocomotiveScroll();
+
   return (
     <div className="flex w-full justify-center pt-40 ">
       <div className="relative ml-6 flex h-[1600px] w-[1440px] overflow-hidden sm:ml-40">

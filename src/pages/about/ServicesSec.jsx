@@ -24,10 +24,10 @@ export default function ServicesSec() {
 
   return (
     <div className="w-full justify-center pb-52">
-      <div className="pb-20 pl-[30px] text-[62px] text-dennisDark min-[774px]:pl-[120px] 2xl:pl-[232px]">
-        <div className="flex">
+      <div className="pb-20 pl-[30px] text-[42px] text-dennisDark sm:text-[62px] min-[774px]:pl-[120px] 2xl:pl-[232px]">
+        <div className="flex  leading-[65px] ">
           I can help you with{" "}
-          <div className="pl-6 pt-[60px]">
+          <div className="hidden pl-6 pt-[46px] 2xl:block">
             <div className="dot-flashing"></div>
           </div>
         </div>

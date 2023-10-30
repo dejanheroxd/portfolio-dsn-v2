@@ -113,10 +113,10 @@ export default function ContactSec() {
                   onMouseLeaveGetInTouch();
                 }}
                 style={{ x }}
-                className="buttonClass absolute bottom-[-70px] right-28 overflow-hidden  rounded-full bg-dennisBlue-100 px-[30px] py-[60px] text-white transition-colors duration-300  sm:bottom-[-76px] sm:right-52 sm:px-[40px] sm:py-[66px] lg:bottom-[-101px] lg:px-[50px] lg:py-[83px] xl:px-[54px] xl:py-[89px]"
+                className="buttonClass absolute bottom-[-70px] right-28 overflow-hidden  rounded-full bg-dennisBlue-100 px-[23px] py-[50px] text-white transition-colors duration-300  sm:bottom-[-76px] sm:right-52 sm:px-[40px] sm:py-[66px] lg:bottom-[-101px] lg:px-[50px] lg:py-[83px] xl:px-[54px] xl:py-[89px]"
                 datatype="go"
               >
-                <p className="relative z-10 sm:text-[15px] lg:text-[18px] 2xl:text-[19px]">
+                <p className="relative z-10 text-[14px] sm:text-[15px] lg:text-[18px] 2xl:text-[19px]">
                   Get in touch
                 </p>
                 <div

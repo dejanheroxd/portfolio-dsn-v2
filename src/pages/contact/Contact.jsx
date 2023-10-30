@@ -4,9 +4,11 @@ import man1 from "../../assets/man1.jpg";
 import { useForm, ValidationError } from "@formspree/react";
 import Transition from "../../components/navbar/Transition";
 import gsap from "gsap";
+import useLocomotiveScroll from "../../components/navbar/useLocomotiveScroll";
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("xvojzoly");
+  useLocomotiveScroll();
   // if (state.succeeded) {
   //   return <p>Thanks for joining!</p>;
   // }
@@ -16,15 +18,15 @@ export default function Contact() {
     gsap.to(circle.current, { top: "-25%", width: "150%", duration: 0.4 });
   }
 
-  function manageMouseLeave() {
-    gsap.to(circle.current, { top: "-150%", width: "125%", duration: 0.4 });
+  const manageMouseLeave = () => {
+    gsap.to(circle.current, { top: "-150%", width: "100%", duration: 0.4 });
     gsap.to(circle.current, {
       top: "100%",
       width: "100%",
       duration: 0,
       delay: 0.4,
     });
-  }
+  };
 
   return (
     <Transition page={"Contact"}>
@@ -116,7 +118,9 @@ export default function Contact() {
                     <button
                       onMouseEnter={() => manageMouseEnter()}
                       onMouseLeave={() => manageMouseLeave()}
-                      className="absolute bottom-[-72px] right-4 h-36 w-36 overflow-hidden rounded-full bg-dennisBlue-100 text-white xl:bottom-[-104px]  xl:h-52 xl:w-52"
+                      data-scroll
+                      data-scroll-speed={0.18}
+                      className="absolute bottom-[-72px] right-4 h-36 w-36 overflow-hidden rounded-full bg-dennisBlue-100 text-white xl:bottom-[-60px]  xl:h-52 xl:w-52"
                       type="submit"
                       disabled={state.submitting}
                     >

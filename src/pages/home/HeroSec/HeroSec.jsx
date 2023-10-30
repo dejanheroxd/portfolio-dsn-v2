@@ -2,11 +2,14 @@ import React from "react";
 import dennis from "../../../assets/dennis.jpg";
 import LocationWork from "./LocationWork";
 import SliderText from "./SliderText";
+import useLocomotiveScroll from "../../../components/navbar/useLocomotiveScroll";
 
 export default function HeroSec() {
+  useLocomotiveScroll();
+
   return (
-    <div className="relative h-[116vh] w-screen bg-dennisGray overflow-hidden">
-      <div className="h-full w-full flex justify-center">
+    <div className="relative h-[116vh] w-screen overflow-hidden bg-dennisGray">
+      <div className="flex h-full w-full justify-center">
         <div className="h-full w-[995px] overflow-hidden">
           <img
             src={dennis}
