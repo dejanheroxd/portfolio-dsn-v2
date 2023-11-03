@@ -9,9 +9,7 @@ import useLocomotiveScroll from "../../components/navbar/useLocomotiveScroll";
 export default function Contact() {
   const [state, handleSubmit] = useForm("xvojzoly");
   useLocomotiveScroll();
-  // if (state.succeeded) {
-  //   return <p>Thanks for joining!</p>;
-  // }
+
   const circle = useRef(null);
 
   function manageMouseEnter() {
@@ -124,7 +122,13 @@ export default function Contact() {
                       type="submit"
                       disabled={state.submitting}
                     >
-                      <p className="relative z-10 xl:text-[18px]">Send it!</p>
+                      {state.succeeded ? (
+                        <p className="relative z-10 xl:text-[18px]">
+                          Sended the form!
+                        </p>
+                      ) : (
+                        <p className="relative z-10 xl:text-[18px]">Send it!</p>
+                      )}
                       <div
                         ref={circle}
                         className="absolute left-[-15%] top-[100%] h-[150%] w-[100%] rounded-[50%] bg-dennisBlue-200"

@@ -3,6 +3,7 @@ import { motion, useInView } from "framer-motion";
 
 import { slideUp, opacity } from "./anim";
 import gsap from "gsap";
+import { Link } from "react-router-dom";
 
 export default function Statement() {
   useEffect(() => {}, []);
@@ -70,24 +71,26 @@ export default function Statement() {
             The combination of my passion for design, code & interaction
             positions me in a unique place in the web design world
           </motion.p>
-          <button
-            onMouseEnter={() => {
-              manageMouseEnter();
-            }}
-            onMouseLeave={() => {
-              manageMouseLeave();
-            }}
-            data-scroll
-            data-scroll-speed={0.18}
-            className="buttonClass absolute bottom-[-130px] right-9 overflow-hidden   rounded-full bg-dennisDark px-[37px] py-[60px] text-white transition-colors duration-300  lg:bottom-[-80px] xl:bottom-[-120px] xl:px-[71px] xl:py-[94px] 2xl:bottom-[-235px]"
-            datatype="go"
-          >
-            <p className="relative z-20">About Me</p>
-            <div
-              ref={circle}
-              className=" absolute left-[-15%] top-[100%] h-[150%] w-[100%] rounded-[50%] bg-dennisBlue-100"
-            ></div>
-          </button>
+          <Link to="/about">
+            <button
+              onMouseEnter={() => {
+                manageMouseEnter();
+              }}
+              onMouseLeave={() => {
+                manageMouseLeave();
+              }}
+              data-scroll
+              data-scroll-speed={0.18}
+              className="buttonClass absolute bottom-[-130px] right-9 overflow-hidden   rounded-full bg-dennisDark px-[37px] py-[60px] text-white transition-colors duration-300  lg:bottom-[-80px] xl:bottom-[-120px] xl:px-[71px] xl:py-[94px] 2xl:bottom-[-235px]"
+              datatype="go"
+            >
+              <button className="relative z-20">About Me</button>
+              <div
+                ref={circle}
+                className=" absolute left-[-15%] top-[100%] h-[150%] w-[100%] rounded-[50%] bg-dennisBlue-100"
+              ></div>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import man1 from "../../../assets/man1.jpg";
 import gsap from "gsap";
 import Footer from "../FooterSec/Footer";
+import { Link } from "react-router-dom";
 
 export default function ContactSec() {
   const circle = useRef(null);
@@ -105,25 +106,27 @@ export default function ContactSec() {
           </div>
           <div className="pt-16">
             <div className="relative h-[1px] w-full bg-neutral-600">
-              <motion.button
-                onMouseEnter={() => {
-                  manageMouseEnterGetInTouch();
-                }}
-                onMouseLeave={() => {
-                  onMouseLeaveGetInTouch();
-                }}
-                style={{ x }}
-                className="buttonClass absolute bottom-[-70px] right-28 overflow-hidden  rounded-full bg-dennisBlue-100 px-[23px] py-[50px] text-white transition-colors duration-300  sm:bottom-[-76px] sm:right-52 sm:px-[40px] sm:py-[66px] lg:bottom-[-101px] lg:px-[50px] lg:py-[83px] xl:px-[54px] xl:py-[89px]"
-                datatype="go"
-              >
-                <p className="relative z-10 text-[14px] sm:text-[15px] lg:text-[18px] 2xl:text-[19px]">
-                  Get in touch
-                </p>
-                <div
-                  ref={circleGetInTouch}
-                  className="absolute left-[-8%] top-[100%] h-[150%] w-[100%] rounded-[50%] bg-dennisBlue-200"
-                ></div>
-              </motion.button>
+              <Link to="/contact">
+                <motion.button
+                  onMouseEnter={() => {
+                    manageMouseEnterGetInTouch();
+                  }}
+                  onMouseLeave={() => {
+                    onMouseLeaveGetInTouch();
+                  }}
+                  style={{ x }}
+                  className="buttonClass absolute bottom-[-70px] right-28 overflow-hidden  rounded-full bg-dennisBlue-100 px-[23px] py-[50px] text-white transition-colors duration-300  sm:bottom-[-76px] sm:right-52 sm:px-[40px] sm:py-[66px] lg:bottom-[-101px] lg:px-[50px] lg:py-[83px] xl:px-[54px] xl:py-[89px]"
+                  datatype="go"
+                >
+                  <p className="relative z-10 text-[14px] sm:text-[15px] lg:text-[18px] 2xl:text-[19px]">
+                    Get in touch
+                  </p>
+                  <div
+                    ref={circleGetInTouch}
+                    className="absolute left-[-8%] top-[100%] h-[150%] w-[100%] rounded-[50%] bg-dennisBlue-200"
+                  ></div>
+                </motion.button>
+              </Link>
               <svg
                 className="absolute right-0 top-[-213px]"
                 width="23"
