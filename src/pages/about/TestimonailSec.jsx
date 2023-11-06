@@ -7,9 +7,7 @@ import man2 from "../../assets/man2.png";
 import man3 from "../../assets/man3.jpeg";
 
 export default function TestimonailSec() {
-  // const container = useRef(null);
   const { scrollYProgress } = useScroll({
-    // target: container,
     offset: ["start end", "end start"],
   });
 
