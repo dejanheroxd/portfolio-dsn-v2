@@ -16,7 +16,6 @@ export default function Footer() {
   }
 
   useEffect(() => {
-    // Update the current time every second
     const timer = setInterval(() => {
       setCurrentTime(getCurrentTime());
     }, 1000);
