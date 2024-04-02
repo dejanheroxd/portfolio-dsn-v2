@@ -16,7 +16,7 @@ export default function HeadingSec() {
           Helping brands thrive in the digital world
         </p>
       </div>
-      <div className="absolute bottom-[-69px] right-[55px] h-28 w-28 rounded-full bg-dennisBlue-100 sm:bottom-[-70px] sm:right-[150px] lg:bottom-[-77px] lg:right-[200px] lg:h-40 lg:w-40 xl:bottom-[-100px] xl:right-[350px] xl:h-52 xl:w-52 2xl:right-[415px]">
+      <div className="absolute bottom-[-55px] right-[55px] h-28 w-28 rounded-full bg-dennisBlue-100 sm:bottom-[-70px] sm:right-[150px] lg:bottom-[-77px] lg:right-[200px] lg:h-40 lg:w-40 xl:bottom-[-100px] xl:right-[350px] xl:h-52 xl:w-52 2xl:right-[415px]">
         <Lottie
           initialSegment={[26, 114]}
           lottieRef={worlRef}
