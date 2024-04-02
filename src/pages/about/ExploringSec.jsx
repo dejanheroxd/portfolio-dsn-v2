@@ -7,7 +7,7 @@ export default function ExploringSec() {
 
   return (
     <div className="flex w-full justify-center pt-40 ">
-      <div className="relative ml-6 flex h-[1100px] w-[1440px] overflow-hidden sm:ml-40">
+      <div className="2xl:[1100px] relative ml-6 flex h-[1500px] w-[1440px] overflow-hidden sm:ml-40">
         <div
           data-scroll
           data-scroll-speed={-0.3}

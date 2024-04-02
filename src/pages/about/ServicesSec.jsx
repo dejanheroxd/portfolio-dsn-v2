@@ -16,7 +16,7 @@ export default function ServicesSec() {
     },
     {
       number: "03",
-      type: "The full package",
+      type: "The full pack",
       skill:
         "A complete website from concept to implementation, that's what makes me stand out. My great sense for design and my development skills enable me to create kick-ass projects.",
     },
@@ -24,7 +24,7 @@ export default function ServicesSec() {
 
   return (
     <div className="w-full justify-center pb-52">
-      <div className="pb-20 pl-[26px] text-[42px] text-dennisDark sm:text-[62px] min-[774px]:pl-[120px] 2xl:pl-[232px]">
+      <div className="pb-20 pl-[24px] text-[42px] text-dennisDark sm:text-[62px] min-[774px]:pl-[120px] 2xl:pl-[232px]">
         <div className="flex  leading-[65px] ">
           I can help you with{" "}
           <div className="hidden pl-6 pt-[46px] 2xl:block">
@@ -34,7 +34,7 @@ export default function ServicesSec() {
       </div>
       <div className="flex flex-col items-center justify-center gap-x-8 min-[1446px]:flex-row">
         {services.map((service) => (
-          <div key={service.number} className="2x:w-[500px]">
+          <div key={service.number} className="2x:w-[500px] pb-8">
             <div className="">
               <p className="w-[300px] border-b-[2px] border-b-gray-300 pb-5 text-dennisGray lg:w-[450px]">
                 {service.number}
