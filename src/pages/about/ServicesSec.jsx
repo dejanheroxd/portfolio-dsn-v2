@@ -24,7 +24,7 @@ export default function ServicesSec() {
 
   return (
     <div className="w-full justify-center pb-52">
-      <div className="pb-20 pl-[30px] text-[42px] text-dennisDark sm:text-[62px] min-[774px]:pl-[120px] 2xl:pl-[232px]">
+      <div className="pb-20 pl-[26px] text-[42px] text-dennisDark sm:text-[62px] min-[774px]:pl-[120px] 2xl:pl-[232px]">
         <div className="flex  leading-[65px] ">
           I can help you with{" "}
           <div className="hidden pl-6 pt-[46px] 2xl:block">
