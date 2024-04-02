@@ -20,7 +20,7 @@ export default function ExploringSec() {
           </p>
           <p className="text-neutral-400">Always exploring...</p>
         </div>
-        <div className="absolute right-[17px] top-[-300px] h-[750px] overflow-hidden sm:right-10 sm:h-[950px] sm:w-[340px] lg:right-10 lg:h-[1150px] lg:w-[540px] xl:right-10 xl:h-[1400px] xl:w-[790px] 2xl:right-[-10px] 2xl:h-[1650px] 2xl:w-[1040px]">
+        <div className="absolute right-[20px] top-[-300px] h-[750px] overflow-hidden sm:right-10 sm:h-[950px] sm:w-[340px] lg:right-10 lg:h-[1150px] lg:w-[540px] xl:right-10 xl:h-[1400px] xl:w-[790px] 2xl:right-[-10px] 2xl:h-[1650px] 2xl:w-[1040px]">
           <img
             data-scroll
             data-scroll-speed={-0.4}
