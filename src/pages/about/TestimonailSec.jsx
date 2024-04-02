@@ -25,7 +25,7 @@ export default function TestimonailSec() {
               Client Feedback
             </p>
             <div className="flex flex-col items-center justify-center gap-x-14 gap-y-12 xl:flex-col xl:gap-y-5">
-              <div className="flex w-[333px] flex-col border border-red-500 sm:w-[400px]">
+              <div className="flex w-[333px] flex-col sm:w-[400px]">
                 <p className="order-2 italic xl:order-2">
                   Dejan's tech skills are <b>fantastic</b>. He makes sure
                   projects work and communicates clearly. A great team player
