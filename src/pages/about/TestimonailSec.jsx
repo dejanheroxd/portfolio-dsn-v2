@@ -14,14 +14,14 @@ export default function TestimonailSec() {
   const height = useTransform(scrollYProgress, [-1, 0.9], [400, -12.9]);
 
   return (
-    <div className="w-full bg-white pt-28 lg:h-[130vh]">
-      <div className="borer flex h-[1000px] w-full items-center justify-center pl-8 sm:pl-0">
-        <div className="gap-x-24 lg:mr-32 lg:flex">
+    <div className="w-full border bg-white pt-28 lg:h-[130vh]">
+      <div className="borer flex h-[1000px] w-full items-center justify-center sm:pl-0">
+        <div className="flex flex-col items-center justify-center gap-x-24 lg:mr-32 lg:flex lg:flex-row lg:items-center lg:justify-center">
           <div className="h-[450px] w-[300px] overflow-hidden lg:h-[650px] lg:w-[500px]">
             <img src={man} alt="" className="h-full w-full object-cover" />
           </div>
           <div>
-            <p className="mt-14 pb-10 text-5xl text-dennisDark lg:text-6xl">
+            <p className="mt-14 pb-10 text-5xl text-dennisDark lg:mt-0 lg:text-6xl">
               Client Feedback
             </p>
             <div className="flex flex-col items-center justify-center gap-x-14 gap-y-12 xl:flex-col xl:gap-y-5">
