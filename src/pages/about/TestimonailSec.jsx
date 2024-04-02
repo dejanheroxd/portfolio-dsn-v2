@@ -14,7 +14,7 @@ export default function TestimonailSec() {
   const height = useTransform(scrollYProgress, [-1, 0.9], [400, -12.9]);
 
   return (
-    <div className="w-full border bg-white pt-28 lg:h-[130vh]">
+    <div className="w-full bg-white pt-28 lg:h-[130vh]">
       <div className="borer flex h-[1000px] w-full items-center justify-center pl-8 sm:pl-0">
         <div className="gap-x-24 lg:mr-32 lg:flex">
           <div className="h-[450px] w-[300px] overflow-hidden lg:h-[650px] lg:w-[500px]">
@@ -25,7 +25,7 @@ export default function TestimonailSec() {
               Client Feedback
             </p>
             <div className="flex flex-col items-center justify-center gap-x-14 gap-y-12 xl:flex-col xl:gap-y-5">
-              <div className="flex w-[333px] flex-col sm:w-[400px]">
+              <div className="flex w-[333px] flex-col border border-red-500 sm:w-[400px]">
                 <p className="order-2 italic xl:order-2">
                   Dejan's tech skills are <b>fantastic</b>. He makes sure
                   projects work and communicates clearly. A great team player

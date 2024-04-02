@@ -8,8 +8,8 @@ export default function HeroSec() {
   useLocomotiveScroll();
 
   return (
-    <div className="relative h-[116vh] w-screen overflow-hidden bg-dennisGray">
-      <div className="flex h-full w-full justify-center">
+    <div className="relative h-[116vh] overflow-hidden bg-dennisGray">
+      <div className="flex h-full  justify-center border">
         <div className="h-full w-[995px] overflow-hidden">
           <img
             src={dennis}
