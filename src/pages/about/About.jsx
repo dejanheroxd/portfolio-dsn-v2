@@ -11,7 +11,7 @@ export default function About() {
     <Transition page={"About"}>
       <div className="mt-24 bg-gradient-to-t from-zinc-200">
         <HeadingSec />
-        <ExploringSec />
+        {/* <ExploringSec /> */}
         <ServicesSec />
         <TestimonailSec />
         <ContactSec />

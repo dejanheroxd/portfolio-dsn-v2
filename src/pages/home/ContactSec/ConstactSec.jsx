@@ -1,6 +1,6 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useRef } from "react";
-import man1 from "../../../assets/man1.jpg";
+import man1 from "../../../assets/men1.jpg";
 import gsap from "gsap";
 import Footer from "../FooterSec/Footer";
 import { Link } from "react-router-dom";
@@ -92,8 +92,8 @@ export default function ContactSec() {
       >
         <div className="w-[300px] sm:w-[700px] lg:w-[800px] xl:w-[900px] 2xl:w-[1275px]">
           <div className="flex pt-8 text-[48px] text-white sm:text-[70px] lg:text-[100px] xl:w-[900px] xl:text-[115px] 2xl:text-[120px]">
-            <div className="ml-0 mr-[16px] mt-3 h-12 w-12 overflow-hidden rounded-full sm:ml-[-7px] sm:mr-3 sm:mt-5 sm:h-16 sm:w-16 lg:mr-4 lg:mt-6 lg:h-24 lg:w-24 xl:mt-9">
-              <img src={man1} alt="" className="h-full w-full object-cover" />
+            <div className="ml-0 mr-[16px] mt-3 h-12 w-12 overflow-hidden rounded-full bg-dennisBlue-100 sm:ml-[-7px] sm:mr-3 sm:mt-5 sm:h-16 sm:w-16 lg:mr-4 lg:mt-6 lg:h-24 lg:w-24 xl:mt-9">
+              {/* <img src={man1} alt="" className="h-full w-full object-cover" /> */}
             </div>
             <div className="">
               <div className="">
@@ -166,7 +166,7 @@ export default function ContactSec() {
               }}
               className="relative overflow-hidden rounded-full border border-neutral-600 px-8 py-5 text-[14px] text-white duration-300  sm:py-4  sm:text-[16px] lg:px-10 lg:py-6 lg:text-[19px]"
             >
-              <p className="relative z-10">dokan.mps@gmail.com</p>
+              <p className="relative z-10">dejan.nts@gmail.com</p>
               <div
                 ref={circle}
                 className="absolute left-[-20%]  top-[100%] h-[150%] w-[100%] rounded-[40%] bg-dennisBlue-100"
@@ -181,7 +181,7 @@ export default function ContactSec() {
               }}
               className="relative overflow-hidden rounded-full border border-neutral-600 px-8 py-5 text-[14px] text-white duration-300  sm:py-4  sm:text-[16px] lg:px-10 lg:py-6 lg:text-[19px]"
             >
-              <p className="relative z-10">+39 4 92 30 83 94</p>
+              <p className="relative z-10">+30 6 94 97 373 59</p>
               <div
                 ref={circle2}
                 className="absolute left-[-20%]  top-[100%] h-[150%] w-[100%] rounded-[40%] bg-dennisBlue-100"

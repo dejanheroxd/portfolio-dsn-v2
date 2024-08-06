@@ -2,9 +2,9 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useRef } from "react";
 import man from "../../assets/manSpeaking.jpg";
 import Stars from "../home/WorkStateSec/Stars";
-import man1 from "../../assets/man1.jpg";
-import man2 from "../../assets/man2.png";
-import man3 from "../../assets/man3.jpeg";
+import man1 from "../../assets/men1.jpg";
+import man2 from "../../assets/men2.jpg";
+import man3 from "../../assets/men3.jpg";
 
 export default function TestimonailSec() {
   const { scrollYProgress } = useScroll({

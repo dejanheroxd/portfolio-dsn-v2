@@ -59,8 +59,8 @@ export default function Statement() {
             initial="initial"
             animate={isInView ? "open" : "closed"}
           >
-            The combination of my passion for design, code & interaction
-            positions me in a unique place in the web design world
+            My high enthusiasm for design, coding, and interaction sets me apart
+            in the web development industry.
           </motion.p>
           <motion.p
             className="left-20 top-40 w-60 pt-12 sm:absolute sm:w-64 sm:pt-16 lg:left-0 lg:top-80 lg:mt-[15px] lg:text-lg xl:hidden xl:pt-0 2xl:mt-[-95px]"

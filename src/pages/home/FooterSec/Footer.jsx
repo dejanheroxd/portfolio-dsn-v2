@@ -39,9 +39,10 @@ export default function Footer() {
           <p className="text-white">{currentTime}</p>
         </div>
       </div>
-      <div className="flex flex-col gap-y-3 pl-[5px] sm:pl-0 ">
-        <p className="text-[13px] font-semibold text-neutral-500">SOCIALS</p>
-        <div className="flex gap-x-6 xl:gap-x-7">
+      <div className="flex flex-col gap-y-3 pl-[5px] sm:pl-0">
+        <p className="text-[13px] font-semibold text-neutral-500">NUMBER</p>
+        <p className="relative z-10 text-white">+30 6 94 97 373 59</p>
+        {/* <div className="flex gap-x-6 xl:gap-x-7">
           <div className="group/socialLink">
             <p className="text-white hover:cursor-pointer">Awwwards</p>
             <span className="invisible absolute group-hover/socialLink:visible">
@@ -66,7 +67,7 @@ export default function Footer() {
               <span className="block h-[1px] w-[60px] bg-white"></span>
             </span>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

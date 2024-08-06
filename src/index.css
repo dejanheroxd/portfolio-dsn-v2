@@ -31,7 +31,7 @@ body::-webkit-scrollbar-thumb {
 /* HeroSec Slider */
 .sliderContainer {
   position: absolute;
-  top: calc(100vh - 380px);
+  top: calc(100vh - 740px);
 }
 
 #trailer {

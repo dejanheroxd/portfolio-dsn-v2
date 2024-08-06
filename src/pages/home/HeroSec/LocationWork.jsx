@@ -10,7 +10,7 @@ export default function LocationWork() {
   }, []);
 
   return (
-    <div className="left-0 right-0 top-[39%] flex h-36 items-center justify-between sm:absolute">
+    <div className="left-0 right-0 top-[67%] flex h-36 items-center justify-between sm:absolute">
       <div className="flex h-[110px] w-[280px] items-center rounded-r-full pl-10 sm:bg-dennisDark">
         <div className="w-16 cursor-default text-white sm:text-xl">
           <p className="hidden leading-6 sm:block">Located in Greece</p>

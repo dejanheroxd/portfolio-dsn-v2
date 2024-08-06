@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import Footer from "../home/FooterSec/Footer";
-import man1 from "../../assets/man1.jpg";
 import { useForm, ValidationError } from "@formspree/react";
 import Transition from "../../components/navbar/Transition";
 import gsap from "gsap";
@@ -139,20 +138,16 @@ export default function Contact() {
               </div>
               <div className="flex flex-col justify-center gap-y-6 pl-5 xl:h-[730px] xl:gap-y-10">
                 <div className="ml-0 mr-[16px] mt-3 h-12 w-12 overflow-hidden rounded-full sm:ml-[-7px] sm:mr-3 sm:mt-5 sm:h-16 sm:w-16 lg:mr-4 lg:mt-6 lg:h-24 lg:w-24 xl:mt-9 xl:h-32 xl:w-32">
-                  <img
-                    src={man1}
-                    alt=""
-                    className="h-full w-full object-cover"
-                  />
+                  <div className="h-full w-full bg-dennisBlue-200 object-cover"></div>
                 </div>
                 <div className="flex flex-col gap-y-2 text-white xl:pb-6">
                   <p className="text-[10px] font-semibold text-dennisGray xl:text-[12px]">
                     CONTACT DETAILS
                   </p>
-                  <p className="xl:text-xl">info.tgd@gmail.com</p>
-                  <p className="xl:text-xl">+20 9 29 43 75 30</p>
+                  <p className="xl:text-xl">dejan.nts@gmail.com</p>
+                  <p className="xl:text-xl">+30 6 94 97 373 59</p>
                 </div>
-                <div className="flex flex-col gap-y-2 text-white">
+                {/* <div className="flex flex-col gap-y-2 text-white">
                   <p className="text-[10px] font-semibold text-dennisGray xl:text-[12px]">
                     SOCIALS
                   </p>
@@ -180,7 +175,7 @@ export default function Contact() {
                       <span className="block h-[1px] w-[75px] bg-white"></span>
                     </span>
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

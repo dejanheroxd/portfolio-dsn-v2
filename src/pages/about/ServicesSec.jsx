@@ -6,24 +6,24 @@ export default function ServicesSec() {
       number: "01",
       type: "Design",
       skill:
-        "With a solid track record in designing websites and apps, I deliver strong and user-friendly digital designs. Solid company branding is the foundation of any succesful website.",
+        "With a proven record in designing websites and apps, I create effective and user-friendly digital experiences. Strong company branding is essential for any successful website.",
     },
     {
       number: "02",
       type: "Development",
       skill:
-        "I build scalable websites from scratch that fit seamlessly with design. My focus is on micro animations, transitions and interaction. For content management I use Kirby CMS. ",
+        "I create scalable websites from scratch that align perfectly with design. My expertise includes micro animations, transitions, and interactions. For Backend i use MySQL and PHP",
     },
     {
       number: "03",
       type: "The full pack",
       skill:
-        "A complete website from concept to implementation, that's what makes me stand out. My great sense for design and my development skills enable me to create kick-ass projects.",
+        "From concept to implementation, I deliver complete websites that truly stand out. My strong design sense and development skills let me create impressive and innovative projects.",
     },
   ];
 
   return (
-    <div className="w-full justify-center pb-52">
+    <div className="w-full justify-center pb-80 pt-96">
       <div className="pb-20 pl-[24px] text-[42px] text-dennisDark sm:text-[62px] min-[774px]:pl-[120px] 2xl:pl-[232px]">
         <div className="flex  leading-[65px] ">
           I can help you with{" "}

@@ -164,10 +164,11 @@ export default function Navbar() {
               </motion.div>
               <div className="w-80 border-t border-neutral-600 pt-6 text-white sm:mb-[-40px] sm:w-full lg:border-none">
                 <p className="pb-3 text-[11px] text-neutral-400 sm:text-[12px]">
-                  SOCIALS
+                  NUMBER
                 </p>
                 <div className="flex gap-x-5 xl:gap-x-6">
-                  {socialLinks.map((link) => (
+                  <p className="relative z-10 text-white">+30 6 94 97 373 59</p>
+                  {/* {socialLinks.map((link) => (
                     <a
                       key={link.name}
                       href=""
@@ -180,7 +181,7 @@ export default function Navbar() {
                         ></span>
                       </span>
                     </a>
-                  ))}
+                  ))} */}
                 </div>
               </div>
             </div>

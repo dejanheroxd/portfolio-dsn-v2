@@ -1,8 +1,8 @@
 import React from "react";
 import Stars from "./Stars";
-import man1 from "../../../assets/man1.jpg";
-import man2 from "../../../assets/man2.png";
-import man3 from "../../../assets/man3.jpeg";
+import man1 from "../../../assets/men1.jpg";
+import man2 from "../../../assets/men2.jpg";
+import man3 from "../../../assets/men3.jpg";
 
 export default function Rating() {
   return (
@@ -30,7 +30,7 @@ export default function Rating() {
           </p>
           <div className="order-1 flex items-center gap-x-3 pt-6">
             <Stars />
-            <p className="w-40 text-[15px] sm:text-base">- Dimitris Georgiou</p>
+            <p className="w-40 text-[15px] sm:text-base">- Dimitra Georgiou</p>
             <div className="h-10 w-10 overflow-hidden rounded-full border border-gray-500">
               <img src={man2} alt="" className="h-full w-full object-cover" />
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import dennis from "../../../assets/dennis.jpg";
+import dennis from "../../../assets/bg.png";
 import LocationWork from "./LocationWork";
 import SliderText from "./SliderText";
 import useLocomotiveScroll from "../../../components/navbar/useLocomotiveScroll";
