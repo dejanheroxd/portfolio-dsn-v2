@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Work({ name, borderTop, siteLink }) {
+export default function Work({ name, borderTop, siteLink, gitLink }) {
   return (
     <>
       <div
@@ -17,8 +17,11 @@ export default function Work({ name, borderTop, siteLink }) {
         </a>
         <div className="flex items-center gap-x-4 text-[10px] text-dennisDark sm:text-[11px] md:text-[13px] 2xl:mr-28 2xl:text-[19px]">
           <p>Development</p>
+
           <button className="rounded-full border border-neutral-300 px-3 py-1  duration-300 hover:border-dennisBlue-100 hover:bg-dennisBlue-100 hover:text-white">
-            Code
+            <a href={gitLink} target="_blank">
+              Code
+            </a>
           </button>
         </div>
       </div>

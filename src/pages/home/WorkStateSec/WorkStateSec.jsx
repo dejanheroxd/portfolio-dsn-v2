@@ -71,17 +71,20 @@ export default function WorkStateSec() {
             borderTop={true}
             name={"ENERGYM"}
             siteLink={"https://energym-fit.netlify.app"}
+            gitLink={"https://github.com/dejanheroxd/energym-v1"}
           />
           <Work
             borderTop={false}
-            name={"DALFORNO"}
-            siteLink={"https://dalforno.netlify.app"}
+            name={"ANTONIO"}
+            siteLink={"https://antoniopizza.netlify.app"}
+            gitLink={"https://github.com/dejanheroxd/antonio"}
           />
           <Work borderTop={false} name={"MARCUS"} />
           <Work
             borderTop={false}
             name={"BUREAU"}
             siteLink={"https://mobileau.netlify.app/"}
+            gitLink={"https://github.com/dejanheroxd/mobileau-shop"}
           />
         </div>
       </div>
